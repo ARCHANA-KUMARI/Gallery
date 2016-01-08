@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main" tools:context=".MainActivity">
+
+    <include  android:id="@+id/appbar" layout="@layout/app_bar" />
+    <ImageView
+        android:layout_below="@id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/back"
+        android:scaleType="centerCrop"
+        android:src="@drawable/imagesmountain"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mountain"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/landscape"
+        android:layout_marginTop="150dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text"
+        android:text="Climent Mount Morolo"
+        android:layout_marginTop="150dp"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/mountain"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/clock"
+        android:src="@drawable/clock"
+        android:layout_below="@id/text"
+        android:layout_marginLeft="80dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15 Min ago"
+        android:id="@+id/min"
+        android:layout_toRightOf="@id/clock"
+        android:layout_marginTop="190dp"
+        android:textColor="@android:color/white"
+       />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/thumb"
+        android:layout_toRightOf="@id/min"
+        android:src="@drawable/thumb"
+        android:layout_marginTop="190dp"
+        android:layout_marginLeft="30dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="24 likes"
+        android:layout_marginTop="195dp"
+        android:layout_toRightOf="@id/thumb"
+        android:textStyle="italic"
+        android:layout_marginLeft="10dp"
+        android:textColor="@android:color/white"
+        />
+    />
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@id/back"
+        android:layout_margin="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerView"
+        >
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>
